@@ -6,7 +6,7 @@
 /*   By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 10:09:04 by hsamira           #+#    #+#             */
-/*   Updated: 2026/02/20 15:01:29 by hsamira          ###   ########.fr       */
+/*   Updated: 2026/02/21 13:37:29 by hsamira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,36 +39,7 @@ Animal::~Animal()
     std::cout << "Animal destructor called" << std::endl;
 }
 
-void Animal::makeSound() const
+void Animal::makeSound()
 {
-    std::cout << "cats don’t bark" << std::endl;
-}
-
-
-Dog::Dog(const std::string type) : Animal(type)
-{
-    std::cout << "Dog default constructor called" << std::endl;
-}
-Dog::Dog(const Dog& other) : Animal(other)
-{
-    *this = other;
-    std::cout << "Dog copy constructeur called" << std::endl;
-}
-Dog& Dog::operator=( const Dog& other)
-{
-    if(this != &other)
-    {
-        Animal::operator=(other);
-    }
-    std::cout << "Dog assignment operator called" << std::endl;
-    return(*this);
-}
- Dog::~Dog()
- {
-    std::cout << "Dog destructor called" << std::endl;
-
- }
-void Dog::makeSound() const
-{
-    std::cout << "cats don’t bark" << std::endl;
+    std::cout << "Animal parle " << std::endl;
 }
