@@ -6,7 +6,7 @@
 /*   By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 12:43:51 by hsamira           #+#    #+#             */
-/*   Updated: 2026/02/21 12:47:29 by hsamira          ###   ########.fr       */
+/*   Updated: 2026/02/22 13:14:23 by hsamira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ class Dog : public Animal
 {
       public:
         Dog();
-        Dog(const std::string type);
+        Dog(const std::string name);
         Dog(const Dog& other);
         Dog& operator=( const Dog& other);
         ~Dog();
-        void makeSound() override;
+        virtual void makeSound() const;
 };
 
 #endif

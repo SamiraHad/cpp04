@@ -6,17 +6,17 @@
 #    By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/20 10:08:20 by hsamira           #+#    #+#              #
-#    Updated: 2026/02/22 08:17:02 by hsamira          ###   ########.fr        #
+#    Updated: 2026/02/22 14:17:30 by hsamira          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Animal
+NAME = Brain
 
 CXX = c++
 
 CXXFLAG = -Wall -Werror -Wextra -std=c++98 -MMD -MP
 
-SRC =  Animal.cpp Cat.cpp Dog.cpp main.cpp
+SRC =  AAnimal.cpp Cat.cpp Dog.cpp  Brain.cpp main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

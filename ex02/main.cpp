@@ -6,35 +6,44 @@
 /*   By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 10:08:16 by hsamira           #+#    #+#             */
-/*   Updated: 2026/02/22 13:44:13 by hsamira          ###   ########.fr       */
+/*   Updated: 2026/02/22 14:28:32 by hsamira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
 
 
 int main()
 {
-    
-    const Animal* meta = new Animal(); //Animal default constructor called
-    const Animal* j = new Dog(); //Animal default constructor called, Dog default constructor called 
-    const Animal* i = new Cat(); //Animal default constructor calle , Cat default constructor called 
-    
-    std::cout << std::endl;
-    
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    i->makeSound(); //will output the cat sound!
-    j->makeSound();
-    meta->makeSound();
+const AAnimal* dog = new Dog();
+const AAnimal* cat = new Cat();
 
-    std::cout << std::endl;
+std::cout << std::endl;
 
-    delete i;
-    delete j;
-    delete meta;
-    
-    return 0;
+dog->makeSound();
+cat->makeSound();
+
+std::cout << std::endl;
+
+
+delete dog;//should not create a leak
+delete cat;
+
+
+return 0;
 }
+
+/* const AAnimal* j = new Dog();
+
+  1 AAnimal
+  2 Brain
+  3 Cat
+
+AAnimal default constructor called
+Brain default constructor called
+Dog default constructor called */
+
+/*On ne peut par faire : AAnimal animal;
+                         const AAnimal* cat = new AAnimal()*/
