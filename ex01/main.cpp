@@ -6,7 +6,7 @@
 /*   By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 10:08:16 by hsamira           #+#    #+#             */
-/*   Updated: 2026/02/24 09:15:32 by hsamira          ###   ########.fr       */
+/*   Updated: 2026/02/24 11:11:52 by hsamira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ const Animal* i = new Cat();
 
 std::cout << std::endl;
 
-delete j;//should not create a leak
+delete j;
 delete i;
 
 std::cout << std::endl;

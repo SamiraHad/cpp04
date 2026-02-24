@@ -6,11 +6,11 @@
 #    By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/20 10:08:20 by hsamira           #+#    #+#              #
-#    Updated: 2026/02/24 11:05:16 by hsamira          ###   ########.fr        #
+#    Updated: 2026/02/24 11:08:37 by hsamira          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Brain
+NAME = AAnimal
 
 CXX = c++
 
