@@ -6,7 +6,7 @@
 #    By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/20 10:08:20 by hsamira           #+#    #+#              #
-#    Updated: 2026/02/22 08:17:02 by hsamira          ###   ########.fr        #
+#    Updated: 2026/02/24 11:04:41 by hsamira          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CXX = c++
 
 CXXFLAG = -Wall -Werror -Wextra -std=c++98 -MMD -MP
 
-SRC =  Animal.cpp Cat.cpp Dog.cpp main.cpp
+SRC =  Animal.cpp Cat.cpp Dog.cpp main.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

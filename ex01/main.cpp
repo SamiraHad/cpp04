@@ -6,7 +6,7 @@
 /*   By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 10:08:16 by hsamira           #+#    #+#             */
-/*   Updated: 2026/02/22 14:40:32 by hsamira          ###   ########.fr       */
+/*   Updated: 2026/02/24 09:15:32 by hsamira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 int main()
 {
+
 const Animal* j = new Dog();
 const Animal* i = new Cat();
 
@@ -30,11 +31,11 @@ std::cout << std::endl;
 
 const int size = 5;
 
-/*if(size <=0 || size % 2 != 0)
+if(size <=0 || size % 2 != 0)
 {
     std::cout << "Size must be positive and even." << std::endl;
     return 1;
-}*/
+}
 
 Animal* animals[size];
 
@@ -46,7 +47,7 @@ for( int i = 0; i < size/2; i++)
 std::cout << std::endl;
 
 for(int i = size/2; i < size; i++)
-    animals[i] = new Cat();
+    animals[i] = new Cat("micha");
 
 std::cout << std::endl;
 

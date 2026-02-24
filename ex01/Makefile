@@ -6,7 +6,7 @@
 #    By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/20 10:08:20 by hsamira           #+#    #+#              #
-#    Updated: 2026/02/22 11:11:25 by hsamira          ###   ########.fr        #
+#    Updated: 2026/02/24 11:04:58 by hsamira          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ $(NAME) : $(OBJ)
 	$(CXX) $(CXXFLAG) -c $< -o $@
 
 clean: 
-	rm -f $(OBJ)
+	rm -f $(OBJ) 
 	rm -f $(DEPS)
 
 fclean: clean

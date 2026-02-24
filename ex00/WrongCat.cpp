@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 12:43:40 by hsamira           #+#    #+#             */
-/*   Updated: 2026/02/24 09:31:16 by hsamira          ###   ########.fr       */
+/*   Updated: 2026/02/22 15:45:39 by hsamira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 
-Cat::Cat() : Animal()
+WrongCat::WrongCat() : WrongAnimal()
 {
-    std::cout << "Cat default constructor called " << std::endl;
+    std::cout << "WrongCat default constructor called " << std::endl;
     _name = "";
-    _type = "Cat";
+    _type = "WrongCat";
 }
 
-Cat::Cat(const std::string name) : Animal(name)
+WrongCat::WrongCat(const std::string name) : WrongAnimal(name)
 {
-    std::cout << "Cat " << _name << "constructor called" << std::endl;
+    std::cout << "WrongCat " << _name << "constructor called" << std::endl;
     _name = name;
-    _type = "Cat";
+    _type = "WrongCat";
 }
 
-Cat::Cat( const Cat& other ) : Animal(other)
+WrongCat::WrongCat( const WrongCat& other ) : WrongAnimal(other)
 
 {
-    std::cout << "Cat copy constructor called" << std::endl;
+    std::cout << "WrongCat copy constructor called" << std::endl;
     _name = other._name;
     _type = other._type;
 }
 
-Cat& Cat::operator=( const Cat& other)
+WrongCat& WrongCat::operator=( const WrongCat& other)
 {
-    std::cout << "Cat assignment operator called" << std::endl;
+    std::cout << "WrongCat assignment operator called" << std::endl;
     if(this != &other)
     {
         _name = other._name;
@@ -47,12 +47,12 @@ Cat& Cat::operator=( const Cat& other)
 }
 
 
-Cat::~Cat()
+WrongCat::~WrongCat()
 {
-    std::cout << "Cat destructor called" << std::endl;
+    std::cout << "WrongCat destructor called" << std::endl;
 }
 
-void Cat::makeSound() const
+void WrongCat::makeSound() const
 {
-    std::cout << "Cat meows" << std::endl;
+    std::cout << "WrongCat meows" << std::endl;
 }

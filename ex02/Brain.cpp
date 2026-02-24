@@ -6,7 +6,7 @@
 /*   By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 09:18:12 by hsamira           #+#    #+#             */
-/*   Updated: 2026/02/22 11:19:07 by hsamira          ###   ########.fr       */
+/*   Updated: 2026/02/24 09:40:26 by hsamira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ Brain::Brain(const Brain& other)
 }
 Brain& Brain::operator=( const Brain& other)
 {
+    std::cout << "Brain assignment operator called" << std::endl;
     if(this != &other)
     {
         for (int i = 0; i < 100; i++)
@@ -36,7 +37,6 @@ Brain& Brain::operator=( const Brain& other)
                 _ideas[i] = other._ideas[i];
             }
     }
-    std::cout << "Brain assignment operator called" << std::endl;
     return(*this);
 }
 

@@ -6,7 +6,7 @@
 /*   By: hsamira <hsamira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 12:43:40 by hsamira           #+#    #+#             */
-/*   Updated: 2026/02/22 14:16:01 by hsamira          ###   ########.fr       */
+/*   Updated: 2026/02/24 09:37:37 by hsamira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,34 +15,39 @@
 
 Cat::Cat() : AAnimal()
 {
+    std::cout << "Cat default constructor called " << std::endl;
+    _name = "";
     _type = "Cat";
     _brainCat = new Brain();
-    std::cout << "Cat default constructor called " << std::endl;
 }
 
-Cat::Cat(const std::string type) : AAnimal(type)
+Cat::Cat(const std::string name) : AAnimal(name)
 {
+    std::cout << "Cat " << _name << " called" << std::endl;
+    _name = name;
     _type = "Cat";
     _brainCat = new Brain();
-    std::cout << "Cat " << _type << " called" << std::endl;
 }
 
 Cat::Cat( const Cat& other ) : AAnimal(other)
 
 {
     std::cout << "Cat copy constructeur called" << std::endl;
+    _name = other._name;
+    _type = other._type;
     _brainCat = new Brain(*other._brainCat);
 }
 
 Cat& Cat::operator=( const Cat& other)
 {
+    std::cout << "Cat assignment operator called" << std::endl;
     if(this != &other)
     {
-        AAnimal::operator=(other);
+        _name = other._name;
+        _type = other._type;
         delete _brainCat;
         _brainCat = new Brain(*other._brainCat);
     }
-    std::cout << "Cat assignment operator called" << std::endl;
     return(*this);
 }
 

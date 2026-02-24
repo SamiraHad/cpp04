@@ -14,25 +14,29 @@
 
 AAnimal::AAnimal():_name("")
 {
-    _type = "AAnimal";
     std::cout << "AAnimal default constructor called" << std::endl;
+    _type = "AAnimal";
 }
 
-AAnimal::AAnimal(const std::string name):_type(name)
+AAnimal::AAnimal(const std::string name):_name(name)
 {
-    _type = "AAnimal";
     std::cout << "AAnimal " << _name<< " called" << std::endl;
+    _type = "AAnimal";
 }
 AAnimal::AAnimal( const AAnimal& other)
 {
-    *this = other;
     std::cout << "AAnimal copy constructeur called" << std::endl;
+    _name = other._name;
+    _type = other._type;
 }
 AAnimal& AAnimal::operator=( const AAnimal& other)
 {
-    if( this != &other)
-        AAnimal::operator=(other);
     std::cout << "AAnimal assignment operator called" << std::endl; 
+    if( this != &other)
+    {
+        _name = other._name;
+        _type = other._type;
+    }
     return(*this);
 }
 
